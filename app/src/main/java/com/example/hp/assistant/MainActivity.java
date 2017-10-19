@@ -2,15 +2,16 @@ package com.example.hp.assistant;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -20,7 +21,7 @@ public class MainActivity extends ActionBarActivity implements TextToSpeech.OnIn
     TextToSpeech tts;
     private final int REQ_CODE_SPEECH_INPUT = 100;
     String text="";
-    Button btn;
+    ImageView btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class MainActivity extends ActionBarActivity implements TextToSpeech.OnIn
         setContentView(R.layout.activity_main);
 
       //  tts=new TextToSpeech(this,this);
-        btn=(Button)findViewById(R.id.btn);
+        btn=(ImageView) findViewById(R.id.btn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
